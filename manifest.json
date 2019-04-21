@@ -1,0 +1,42 @@
+{
+  "name": "SCIHub",
+  "description": "Free Science Anywhere...",
+  "version": "0.0.0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "proxy",
+    "http://localhost:8000/"
+
+  ],
+
+  "browser_action":{
+    "default_popup": "popup.html"
+  },
+  "content_scripts":[
+    {
+      "matches":[
+        "*://*.doi.org/*",
+        "*://doi.org/*",
+        "*://ieeexplore.ieee.org/*",
+        "*://*.sciencedirect.com/*",
+        "*://sciencedirect.com/*",
+        "*://*.acm.org/*",
+        "*://acm.org/*",
+        "*://*.springer.com/*",
+        "*://*.ncbi.nlm.nih.gov/*"
+
+      ],
+      "js":[
+        "js/jquery.js",
+        "js/chrome.js"
+
+      ],
+      "run_at": "document_start",
+      "persistent": false
+    }
+  ]
+  
+  
+}
