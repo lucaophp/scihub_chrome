@@ -10,7 +10,7 @@ $.ajax({
 		}
     },
   error: function(data) {
-       window.location = "https://sci-hub.tw/"+window.location;
+       window.location = "https://sci-hub.se/"+window.location;
   }
 
 })
